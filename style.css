@@ -1,14 +1,6 @@
 p{
-    text-indent: 100px;
-    word-spacing: 10px;
+    color: rgb(33, 102, 78);
 }
-a:active{
-    color: #f5f5f5;
-}
-ol li:nth-child(odd){
-    color: #a52a2a;
-
-}
-ol li:hover{
-    color: violet;
+body{
+    text-align: center;
 }
