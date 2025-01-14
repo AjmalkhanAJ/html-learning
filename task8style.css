@@ -1,0 +1,30 @@
+nav{
+    height: 30px;
+    background-color: orange;
+    padding: 10px;
+}
+h3,p{
+    display: inline;
+}
+p{
+    margin-left: 60%;
+}
+.con1,.con2, .con3{
+    padding: 1px; 
+    margin-left: 4%;
+}
+span{
+    color: orange;
+}
+table{
+    padding: 40px;
+    margin-right: 50px;
+}
+button{
+    height: 40px;
+    width: 80px;
+    background-color: orange;
+}
+.khan{
+    color: orange;
+}
