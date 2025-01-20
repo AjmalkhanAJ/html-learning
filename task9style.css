@@ -1,0 +1,33 @@
+
+
+hr{
+    width: 120px;
+    height: 2px;
+    background-color: black;
+}
+span{
+    color: greenyellow;
+}
+.cont1{
+    height: 100px;
+    width: 150px;
+    margin-left:30px;
+    margin-top: 20px;
+   
+}
+.cont2{
+    height: 100px;
+    width: 150px;
+    margin-left: 35%;
+    margin-top: -7%;
+    
+    
+    
+}
+.cont3{
+    height: 100px;
+    width: 150px;
+    margin-left: 70%;
+    margin-top: -5%;
+}
+
