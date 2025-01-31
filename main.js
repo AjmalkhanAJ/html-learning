@@ -1,12 +1,11 @@
-
-    let obj={
-        Name :"Ajmal",
-        phno :12345678,
-        city :"pudukkottai",
-        degree:"",
+function show(a)
+{
+    c=0;
+    while(a)
+    {
+        c++;
+        a=Math.floor(a/10);
     }
-    console.log(obj)
-    console.log(obj.city)
-    obj.degree="BCA"
-    console.log(obj.degree)
-    
+    document.getElementById('ss').innerHTML=c;
+
+    }
