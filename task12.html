@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter12</title>
+    <link rel="stylesheet" href="task12style.css">
+</head>
+<body>
+    <div>
+        <h2>Prime Numbers</h2>
+        <input type="number" name="" id="con">
+        <button onclick="aj()">Generate</button><br><br>
+        <textarea name="number" id="box"></textarea>
+    </div>
+</body>
+<script>
+    function aj(){
+    let a=document.getElementById("con").value;
+    let b=""
+    for(i=1;i<=a;i++){
+        f=1;
+        for(j=2;j<=i/2;j++){
+        if(i%j==0)
+    {
+        var f=0;
+        break;
+    }
+}if(f)
+    b+=i+" "
+    }
+    
+        document.getElementById("box").innerHTML=b;
+    }
+</script>
+</html>

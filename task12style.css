@@ -1,0 +1,21 @@
+div{
+    height: 300px;
+    width: 300px;
+    border: 2px solid gray;
+    background-color: rgb(157, 73, 73);
+    padding: 80px;
+    margin-top: 150px;
+    margin-left: 450px;
+    border-radius: 50%;
+    text-align: center;
+}
+textarea{
+    height: 25px;
+    width: 240px;
+}
+h2{
+    margin-top: 70px;
+}
+body{
+background-color: rgb(93, 81, 81);
+}
