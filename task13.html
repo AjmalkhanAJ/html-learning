@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter13</title>
+    <link rel="stylesheet" href="task13style.css">
+</head>
+<body>
+    <marquee behavior="" direction=""><h2>Find the given string palindrome or not</h2></marquee>
+    <div>
+
+        <h3>Palindrome Checking</h3>
+        <input type="text" name="" id="ajmal">
+        <button onclick="sk()">Check</button><br><br>
+        <textarea name="text" id="khan"></textarea>
+    </div>
+</body>
+<script>
+    function sk(){
+        let a=document.getElementById("ajmal").value;
+        let b=a.length,s=""
+        for(i=b-1;i>=0;i--){
+            s+=a[i]
+        }
+        if(s==a && a!="")
+        {
+            document.getElementById("khan").innerHTML="palindrome";
+            document.getElementById("khan").style.color="green"
+
+        }
+        else{
+            document.getElementById("khan").innerHTML="not";
+            document.getElementById("khan").style.color="red"
+        }
+    }
+</script>
+</html>
