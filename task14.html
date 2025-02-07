@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter14</title>
+    <link rel="stylesheet" href="task14style.css">
+</head>
+<body>
+    <!-- <img src="https://picsum.photos/1500/800" alt=""> -->
+    <div>
+    <fieldset>
+        <label for="">Username</label><br>
+        <input type="text" name="" id="ss1" required>
+        <p id="sp"></p><br>
+        <label for="">Email</label><br>
+        <input type="email" name="" id="ss2" required>
+        <p id="sp1"></p><br>
+        <label for="">Password</label><br>
+        <input type="password" name="" id="ss3" required>
+        <p id="sp2"></p><br>
+        <label for="">Password</label><br>
+        <input type="password" name="" id="ss4" required>
+        <p id="sp3"></p><br>
+        <input type="submit" name="" id="" value="submit" onclick="fun()">
+    </fieldset>
+</div>
+</body>
+<script>
+    function fun(){
+        let a=document.getElementById("ss1").value;
+        let b=document.getElementById("ss2").value;
+        let c=document.getElementById("ss3").value;
+        let d=document.getElementById("ss4").value;
+        if(a=="" && b=="" && c=="" && d=="")
+    {
+        document.getElementById("sp").innerHTML="please fill in the field ";
+        document.getElementById("sp1").innerHTML="please fill in the field";
+        document.getElementById("sp2").innerHTML="please fill in the field";
+        document.getElementById("sp3").innerHTML="please fill in the field";
+    }
+    if(a==""){
+        document.getElementById("sp").innerHTML="please enter your Username";
+        document.getElementById("sp").style.color="red";
+    }
+    else{
+        document.getElementById("sp").style.display="none";
+    }
+    if(b==""){
+        document.getElementById("sp1").innerHTML="please enter your Email";
+        document.getElementById("sp1").style.color="red";
+    }
+    else{
+        document.getElementById("sp1").style.display="none";
+    }
+    if(c==""){
+        document.getElementById("sp2").innerHTML="please enter your Password";
+        document.getElementById("sp2").style.color="red";
+    }
+    else{
+        document.getElementById("sp2").style.display="none";
+    }
+    if(d==""){
+        document.getElementById("sp3").innerHTML="please enter your Password";
+        document.getElementById("sp3").style.color="red";
+    }
+    else{
+        document.getElementById("sp3").style.display="none";
+    }
+    }
+</script>
+</html>
