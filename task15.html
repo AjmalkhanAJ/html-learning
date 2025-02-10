@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter15</title>
+    <link rel="stylesheet" href="task15style.css">
+</head>
+<body>
+    <div id="full"></div>
+    <div class="con">
+        
+        <h1>Counter</h1>
+        <h2 id="counting"></h2>
+        <button class="box3" onclick="decrement()">-</button> 
+        <input type="reset" value="reset"  class="box2" onclick="reset()">
+        <button class="box1" onclick="increment()">+</button> 
+    </div>
+</body>
+<script>
+let data = 0;
+document.getElementById("counting").innerText = data;
+function increment() {
+	data = data + 1;
+	document.getElementById("counting").innerText = data;
+}
+function decrement() {
+	data = data - 1;
+	document.getElementById("counting").innerText = data;
+}
+var div = document.getElementById("full");
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function changeColor(){
+  div.style.backgroundColor= getRandomColor();
+}
+
+setInterval(changeColor,1000);
+function reset() {
+    data = 0;
+	document.getElementById("counting").innerText = data;
+   }
+</script>
+</html>

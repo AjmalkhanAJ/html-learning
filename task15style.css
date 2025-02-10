@@ -1,0 +1,35 @@
+
+.con{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 600px;
+}
+h2{
+    color: rgb(187, 15, 118);
+}
+.box1{
+    background-color: green;
+}
+.box2{
+    background-color: gray;
+}
+.box3{
+    background-color: red;
+}
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #full {
+    position: absolute;
+    height: 750px;
+    width: 100%;
+  }
