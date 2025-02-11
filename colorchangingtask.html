@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        height: 40px;
+        width: 100px;
+        border: 2px solid black;
+        padding: 10px;
+        margin: 30px;
+        text-align: center;
+        background-color: aqua;
+       margin-top:100px ;
+    }
+</style>
+</head>
+<body >
+    <table align="center">
+    <tr>
+    <td><div><input type="radio" onclick="red()" id="ss1">red</div></td>
+    <td><div><input type="radio" onclick="green()" id="ss2">green</div></td>
+    <td><div><input type="radio" onclick="blue()" id="ss3">blue</div></td>
+</tr>
+<tr>
+    <td><div><input type="radio" onclick="blueviolet()" id="ss4">blueviolet</div></td>
+    <td><div><input type="radio" onclick="pink()" id="ss5">pink</div></td>
+    <td><div><input type="radio" onclick="orange()" id="ss6">orange</div></td>
+</tr>
+<tr>
+    <td><div><input type="radio" onclick="aqua()" id="ss7">aqua</div></td>
+    <td><div><input type="radio" onclick="yellow()" id="ss8">yellow</div></td>
+    <td><div><input type="radio" onclick="lightgreen()" id="ss9">lightgreen</div></td>
+</tr>
+</table>
+</body>
+<script>
+    function red(){
+        document.getElementById("ss1").value;
+        document.body.style.backgroundColor="red";
+    }
+    function green(){
+        document.getElementById("ss2").value;
+        document.body.style.backgroundColor="green";
+    }
+    function blue(){
+        document.getElementById("ss3").value;
+        document.body.style.backgroundColor="blue";
+    }
+    function blueviolet(){
+        document.getElementById("ss4").value;
+        document.body.style.backgroundColor="blueviolet";
+    }
+    function pink(){
+        document.getElementById("ss5").value;
+        document.body.style.backgroundColor="pink";
+    }
+    function orange(){
+        document.getElementById("ss6").value;
+        document.body.style.backgroundColor="orange";
+    }
+    function aqua(){
+        document.getElementById("ss7").value;
+        document.body.style.backgroundColor="aqua";
+    }
+    function yellow(){
+        document.getElementById("ss8").value;
+        document.body.style.backgroundColor="yellow";
+    }
+    function lightgreen(){
+        document.getElementById("ss9").value;
+        document.body.style.backgroundColor="lightgreen";
+    }
+</script>
+</html>
