@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+          height: 40px;
+          width: 200px;
+          border: 2px solid black;
+          text-align: center;
+        }
+        div{
+            height: 200px;
+            width: 300px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: bisque;
+            margin-top: 200px;
+            margin-left: 500px;
+        }
+        body{
+            background-color: rgb(79, 47, 67);
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>captcha generator</h1>
+    <p id="sk"></p><br>
+    <button onclick="fun()">submit</button>
+    <input type="text" name="" id="" placeholder="enter captcha">
+</div>
+</body>
+<script>
+    function fun(){
+        let s="", char="qwertyuioplkjhgfdsazxcvbnmMNBVCXZASDFGHJKLPOIUYTREWQ1234567890@#$&",i;
+        for(i=0;i<=6;i++){
+            s+=char[Math.floor(Math.random()*66)]+""
+        }
+        document.getElementById("sk").innerHTML=s;
+    }
+</script>
+</html>
