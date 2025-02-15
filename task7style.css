@@ -1,4 +1,4 @@
-div{
+.con{
     height: 300px;
     width: 200px;
     border:  3px solid  blueviolet;
@@ -8,26 +8,21 @@ div{
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0px 0px 20px blueviolet;
-    
-    
-   
-   
 }
 body{
     background-color: black;
 }
 
-
 button{
     background-color: blueviolet;
-   height: 20px;
+    height: 20px;
     width: 170px;
-   margin-top: 10%;
+    margin-top: 10%;
     margin-right: 40%;
     border-radius: 5px;
 }
 span{
-    color: rgb(15, 15, 165);
+    color: rgb(16, 229, 219);
 }
 *{
     color: white;
@@ -44,4 +39,74 @@ input[ type=text]{
 input[ type=number]{
     background-color: blueviolet;
     border-radius: 5px;
+}
+.ball1{
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: red;
+    top: 130px;
+    left: 590px;
+    position: absolute;
+    animation-name: ajmal;
+    animation-duration: 3s;
+}
+.ball2{
+    height: 50px;
+    width: 50px;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 590px;
+    top: 180px;
+    position: absolute;
+    animation-name: khan;
+    animation-duration: 3s;
+}
+@keyframes ajmal{
+    0%{
+        top: 130px;
+        left: 600px;
+    }
+    25%{
+        top: 130px;
+        left: 820px;
+    }
+    50%{
+        top: 460px;
+        left: 820px;
+
+    }
+    75%{
+        top: 120px;
+        left: 820px;
+    }
+    100%{
+        top: 130px;
+        left: 600px;
+    }
+    
+}
+@keyframes khan {
+   0%{ 
+    top: 180px;
+    left: 590px;
+}
+  25%{
+    top: 460px;
+    left: 590px;
+  }
+  50%{
+    top: 460px;
+    left: 780px;
+  }
+  75%{
+    top: 460px;
+    left: 590px;
+  }
+  100%{
+    top: 180px;
+    left: 590px;
+  }
 }
