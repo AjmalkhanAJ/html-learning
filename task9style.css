@@ -1,5 +1,4 @@
 
-
 hr{
     width: 120px;
     height: 2px;
@@ -10,24 +9,25 @@ span{
 }
 .cont1{
     height: 100px;
-    width: 150px;
-    margin-left:30px;
+    width: 250px;
+    margin-left:50px;
     margin-top: 20px;
+    
+    
    
 }
 .cont2{
     height: 100px;
-    width: 150px;
-    margin-left: 35%;
+    width: 250px;
+    margin-left: 45%;
     margin-top: -7%;
-    
-    
-    
+   
 }
 .cont3{
     height: 100px;
-    width: 150px;
-    margin-left: 70%;
-    margin-top: -5%;
+    width: 250px;
+    margin-left: 80%;
+    margin-top: -7%;
+    
 }
 

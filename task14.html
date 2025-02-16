@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chapter14</title>
     <link rel="stylesheet" href="task14style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <!-- <img src="https://picsum.photos/1500/800" alt=""> -->
+    
     <div class="con">
-    <!-- </div> -->
-    <!-- <div class="box"> -->
     <fieldset class="box">
-        <label for="">Username</label><br>
+        <label for=""><i class="fa-regular fa-user fa-sm"></i> Username</label><br>
         <input type="text" name="" id="ss1" required>
         <p id="sp"></p><br>
-        <label for="">Email</label><br>
+        <label for=""><i class="fa-regular fa-envelope fa-sm"></i> Email</label><br>
         <input type="email" name="" id="ss2" required>
         <p id="sp1"></p><br>
-        <label for="">Password</label><br>
+        <label for=""><i class="fa-solid fa-lock fa-sm"></i> Password</label><br>
         <input type="password" name="" id="ss3" required>
         <p id="sp2"></p><br>
-        <label for="">Password</label><br>
+        <label for=""><i class="fa-solid fa-lock fa-sm"></i> Password</label><br>
         <input type="password" name="" id="ss4" required>
         <p id="sp3"></p><br>
-        <input type="submit" name="" id="" value="submit" onclick="fun()">
+        <input type="submit" name="" id="aj" value="submit" onclick="fun()">
     </fieldset>
 </div>
 </body>
@@ -43,31 +43,45 @@
     }
     if(a==""){
         document.getElementById("sp").innerHTML="please enter your Username";
-        document.getElementById("sp").style.color="red";
+        document.getElementById("sp").style.color="lightgreen";
     }
     else{
         document.getElementById("sp").style.display="none";
     }
     if(b==""){
         document.getElementById("sp1").innerHTML="please enter your Email";
-        document.getElementById("sp1").style.color="red";
+        document.getElementById("sp1").style.color="lightgreen";
     }
     else{
         document.getElementById("sp1").style.display="none";
     }
     if(c==""){
         document.getElementById("sp2").innerHTML="please enter your Password";
-        document.getElementById("sp2").style.color="red";
+        document.getElementById("sp2").style.color="lightgreen";
     }
     else{
         document.getElementById("sp2").style.display="none";
     }
     if(d==""){
         document.getElementById("sp3").innerHTML="please enter your Password";
-        document.getElementById("sp3").style.color="red";
+        document.getElementById("sp3").style.color="lightgreen";
     }
     else{
+        k=1,j=0;
+        for(i=0;i<=c.length;i++,j++)
+    {
+        if(c[i]!=d[j]){
+        k=0;
+        break
+        }
+    }
+    if(k==1)
         document.getElementById("sp3").style.display="none";
+    else
+    {
+        document.getElementById("sp3").innerHTML="Please enter your current password";
+        document.getElementById("sp3").style.color="red";
+    }
     }
     }
 </script>

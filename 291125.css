@@ -1,0 +1,10 @@
+div{
+    height: 300px;
+    width: 300px;
+    border: 2px solid brown;
+}
+body{
+    background-image: url("naturetask.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
