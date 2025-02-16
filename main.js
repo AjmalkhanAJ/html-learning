@@ -1,17 +1,17 @@
 
-// function aj(a){
-//     var c=0;
-//     var d=-1;
-//     var b=1;
-//  while(a){
-//     c=d+b;
-//     alert(c)
-//     d=b;
-//     b=c;
-//     a--;
-//  }
-// }
-// aj(10)
+function aj(a){
+    var c=0;
+    var d=-1;
+    var b=1;
+ while(a){
+    c=d+b;
+    alert(c)
+    d=b;
+    b=c;
+    a--;
+ }
+}
+aj(10)
 
 
 
@@ -26,5 +26,5 @@
 // console.log(sk(3))
 
 
-let num=(a,b)=>{return a+b}
-console.log(num(1,2));
+// let num=(a,b)=>{return a+b}
+// console.log(num(1,2));
