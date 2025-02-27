@@ -10,17 +10,17 @@ const pal = (num)=>{
 
 const pri = (num) =>{
         let i=2,f=true;
-    while(i<=Math.floor(num)){
+    while(i<=Math.floor(num/2)){
         if(num%i==0){
             f=false;
-            break
+            break;
         }
         i++;
     }
-    return f;
+    return f?true:false
 }
 
 module.exports={
-    prime:pri,
+    kkprime:pri,
     palind:pal
 }
