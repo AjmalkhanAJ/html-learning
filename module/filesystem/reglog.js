@@ -2,7 +2,7 @@ const http = require ('http');
 const url = require ('url');
 const fs = require ('fs');
 
-createserver = http.createServer((req,res)=>{
+const server = http.createServer((req,res)=>{
     const parseurl = url.parse (req.url,true);
     console.log(parseurl);
    
@@ -38,6 +38,6 @@ createserver = http.createServer((req,res)=>{
         res.end();
     }
 })
-Server.listen(5000,()=>{
+server.listen(5000,()=>{
    console.log("server running on http://localhost:5000");
 })
