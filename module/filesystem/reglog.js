@@ -24,14 +24,14 @@ const server = http.createServer((req,res)=>{
         let m = parseurl.query.mail
         let p = parseurl.query.pass
          
-        res.writeHead(200,{"content-Type":"text/html"});
-        fs.writeFile('db.txt',n+""+m+""+p,(err)=>{
-            if (err) throw err;
-            else{
-                res.write(`<script>alert('register success')</script>`);
-                res.end();
-            }
-        })
+        // res.writeHead(200,{"content-Type":"text/html"});
+        // fs.writeFile('db.txt',n+""+m+""+p,(err)=>{
+        //     if (err) throw err;
+        //     else{
+        //         res.write(`<script>alert('register success')</script>`);
+        //         res.end();
+        //     }
+        // })
     }
      elseif(parseurl.pathname === "/log")
         {
