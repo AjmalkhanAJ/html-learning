@@ -1,0 +1,94 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  body {
+    background: #fef5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  /* Background Decoration */
+  .background {
+    position: absolute;
+    background: url('./hotel\ naveen-1.jpg') no-repeat center center/cover;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+  }
+  
+  /* Form Box */
+  .form-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 500px;
+    width: 500px;
+  }
+  .form-box h1 {
+    font-size: 26px;
+    color: #ff5c00;
+    margin-bottom: 10px;
+  }
+  .form-box h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  button {
+    background: #ff5c00;
+    color: white;
+    padding: 12px 25px;
+    width: 80%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #e64c00;
+  }
+  .login-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .login-text a {
+    color: #ff5c00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  *{
+    font-size: large;
+  }
+
+  .van{
+    margin-top: 10px;
+  }
+  .sk{
+    font-size: xx-large;
+  }
+  
