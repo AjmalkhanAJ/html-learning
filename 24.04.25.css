@@ -10,3 +10,9 @@ h1{
 span{
     margin-left: 220%;
 }
+.navbar{
+    background-color: green;
+}
+body{
+    /* background-color: rgb(194, 139, 52) !important; */
+}
