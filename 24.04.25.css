@@ -1,6 +1,9 @@
 nav{
     margin-top: 20px;
 }
+.navbar{
+    background-color: aqua;
+}
 
 h1{
     display: inline;
@@ -14,5 +17,5 @@ span{
     background-color: green;
 }
 body{
-    /* background-color: rgb(194, 139, 52) !important; */
+    background-color: rgb(194, 139, 52) !important;
 }
