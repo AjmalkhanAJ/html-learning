@@ -8,95 +8,184 @@
   <link rel="stylesheet" href="24.04.25.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
 
    <!-- < Navbar> -->
- <nav class="navbar navbar-light bg-light">
+ <nav class="navbar navbar-light bg-">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <h1 class="h3 mb-0">Bootstrap</h1>
+        <h1 class="h1 mb-0">BEST DELIVERY</h1>
       </a>
-      <button class="btn btn-outline-primary">About Us</button>
+
+      <button class="btn1 btn-secondary dropdown-toggle" data-bs-toggle="dropdown" >
+        Menu list
+      </button>
+      <ul class="dropdown-menu">
+        <li><button class="dropdown-item" type="button">Biriyani</button></li>
+        <li><button class="dropdown-item" type="button">Fried Rice</button></li>
+        <li><button class="dropdown-item" type="button">Parotta</button></li>
+        <li><button class="dropdown-item" type="button">Kushka</button></li>
+        <li><button class="dropdown-item" type="button">Meals</button></li>
+        <li><button class="dropdown-item" type="button">Curd Rice</button></li>
+      </ul>
+    
+    <a class="ak1" href="#">About us</a>
+      <a href="#">Sign in</a>
+      <button class="btn3 btn-outline-danger">Sign out</button>
+
+      
     </div> 
   </nav>
    <div>
-    <img src="/hotel naveen-1.jpg" alt="Hotel Image" class="img-fluid" style="height: 700px; width: 100%;">
+    <img src="/hotel naveen-1.jpg" alt="Hotel Image" class="img-fluid" style="height: 900px; width: 100%;">
   </div>
 
   <!-- Cards Section -->
   <div class="container my-5">
     <div class="row g-4">
-      
-      <!-- Card 1 -->
-       <div class="col-md-4">
-        <div class="card">
-          <img src="/biriyani.jpeg" class="card-img-top" alt="Biriyani">
-          <div class="card-body text-center">
-            <h5 class="card-title">Biriyani</h5>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card 2 -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="/friedrice2.jpeg" class="card-img-top" alt="Fried Rice">
+        <div class="card1">
+          <img src="/biriyani.jpeg" class="card-img-top" alt="Biriyani" height="180px">
           <div class="card-body text-center">
-            <h5 class="card-title">Fried Rice</h5>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title1">BIRIYANI </h5>
+            <p class="card-text1"><strong>Description:</strong> Spicy Hyderabadi dum biriyani cooked with aromatic basmati rice.<br>
+            <strong class="it1">Delivery:</strong> 30 mins <strong class="it2">Rating:</strong> ⭐4.5/5  </p> 
+
+           <h6 class="it4"> Rs : <i class="fa-solid fa-indian-rupee-sign"></i>150</h6> <a href="#" class="btn txt-info btn-outline-danger">Add to Cart</a>
           </div>
         </div>
       </div>
+      
+
+      <div class="col-md-4">
+        <div class="card2">
+          <img src="/friedrice2.jpeg" class="card-img-top" alt="Fried Rice" style="height: 180px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">FRIED RICE</h5>
+            <p class="card-text2">
+              <strong >Description:</strong> Aromatic fried rice with mixed vegetables and special sauces.<br><br>
+              <strong class="im1">Delivery:</strong> 20 mins &nbsp;&nbsp; <strong class="im2">Rating:</strong> ⭐4.4/5 </p>
+            <h6 class="im3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 100</h6>
+            <a href="#" class="btn btn-outline-danger">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      
 
       <!-- Card 3 -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="/parotta.jpeg" class="card-img-top" alt="Parotta">
+        <div class="card3">
+          <img src="/parotta.jpeg" class="card-img-top" alt="Parotta" style="height: 180px; object-fit: cover;">
           <div class="card-body text-center">
-            <h5 class="card-title">Parotta</h5>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title">PAROTTA</h5>
+            <p class="card-text">
+              <strong >Description:</strong> Soft and flaky layered South Indian parotta served hot.<br><br>
+              <strong class="op1">Delivery:</strong> 15 mins &nbsp;&nbsp; <strong class="op2">Rating:</strong> ⭐4.6/5
+            </p>
+            <h6 class="op3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 15</h6>
+            <a href="#" class="btn btn-outline-danger">Add to Cart</a>
           </div>
         </div>
       </div>
+      
 
       <!-- Card 4 -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="/kushka.jpeg" class="card-img-top" alt="Kushka">
+        <div class="card4">
+          <img src="/kushka.jpeg" class="card-img-top" alt="Kushka" style="height: 180px; object-fit: cover;">
           <div class="card-body text-center">
-            <h5 class="card-title">Kushka</h5>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title">KUSHKA</h5>
+            <p class="card-text4">
+              <strong >Description:</strong> Flavorful South Indian plain biriyani made with aromatic spices.<br>
+              <strong class="kl1">Delivery:</strong> 20 mins &nbsp;&nbsp; <strong class="kl2">Rating:</strong> ⭐4.5/5
+            </p>
+            <h6 class="kl3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 50</h6>
+            <a href="#" class="btn btn-outline-danger">Add to Cart</a>
           </div>
         </div>
       </div>
+      
 
       <!-- Card 5> -->
-    <div class="col-md-4">
-        <div class="card">
-          <img src="/meals.jpeg" class="card-img-top" alt="Meals">
+      <div class="col-md-4">
+        <div class="card5">
+          <img src="/meals.jpeg" class="card-img-top" alt="Meals" style="height: 180px; object-fit: cover;">
           <div class="card-body text-center">
-            <h5 class="card-title">Meals</h5>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title">MEALS</h5>
+            <p class="card-text5">
+              <strong>Description:</strong> Traditional South Indian meals served with rice, sambar, curry, and curd.<br>
+              <strong class="ab1">Delivery:</strong> 25 mins &nbsp;&nbsp; <strong class="ab2">Rating:</strong> ⭐4.7/5
+            </p>
+            <h6 class="ab3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 90</h6>
+            <a href="#" class="btn btn-outline-danger">Add to Cart</a>
           </div>
         </div>
       </div>
+      
 
       <!-- Card 6 -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="/curd.jpg" class="card-img-top" alt="Meals">
+        <div class="card6">
+          <img src="/curd.jpg" class="card-img-top" alt="Curd Rice" style="height: 180px; object-fit: cover;">
           <div class="card-body text-center">
-            <h5 class="card-title">Curd Rice</h5>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title">CURD RICE</h5>
+            <p class="card-text6">
+              <strong>Description:</strong> Creamy and refreshing curd rice, served with a side of pickle and pappad.<br>
+              <strong class="as1">Delivery:</strong> 15 mins &nbsp;&nbsp; <strong class="as2">Rating:</strong> ⭐4.8/5
+            </p>
+            <h6 class="as3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 50</h6>
+            <a href="#" class="btn btn-outline-danger">Add to Cart</a>
           </div>
         </div>
       </div>
+      
 
     </div>
   </div>
+
+
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>We are a food delivery service dedicated to bringing the best food to your doorstep. Fresh, fast, and delicious!</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light">Home</a></li>
+            <li><a href="#" class="text-light">Menu</a></li>
+            <li><a href="#" class="text-light">Contact</a></li>
+            <li><a href="#" class="text-light">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Email: <a href="mailto:support@example.com" class="text-light">support@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890" class="text-light">+1 234 567 890</a></p>
+          <div>
+            <a href="#" class="text-light mr-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-light mr-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col text-center">
+          <p>&copy; 2025 Your Delivery App. All rights reserved.</p>
+          <p><a href="#" class="text-light">Privacy Policy</a> | <a href="#" class="text-light">Terms & Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
 
 </body>
 </html> 

@@ -1,5 +1,5 @@
 nav{
-    margin-top: 20px;
+    height: 100px;
 }
 .navbar{
     background-color: aqua;
@@ -8,14 +8,160 @@ nav{
 h1{
     display: inline;
     margin-left: 20%;
+    color: red;
 }
 
 span{
     margin-left: 220%;
 }
 .navbar{
-    background-color: green;
+    background-color: rgb(215, 190, 180);
 }
 body{
-    background-color: rgb(194, 139, 52) !important;
+    background-color:  rgb(215, 190, 180) !important;
+}
+.ak1{
+    /* margin-left: 10%; */
+}
+.btn1{
+    margin-left: 50%;
+}
+.it1{
+    margin-left: -20px;
+
+}
+.it2{
+    margin-left: 35px;
+}
+.card-text1{
+    text-align: justify;
+}
+.card1{
+    height: 400px;
+    width: 320px;
+    border: 2px solid wheat;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.card-tittle1{
+    margin-top: -80px;
+}
+.it4{
+    display: inline;
+    margin-left: -15px;
+}
+.btn{
+    margin-left: 100px;
+}
+.card-img-top{
+    border-radius: 10px;
+}
+.card2{
+    height: 400px;
+    width: 320px;
+    border: 2px solid wheat;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.im1{
+    margin-left: -20px;
+}
+.im2{
+    margin-left: 20px;
+}
+.im3{
+    display: inline;
+    margin-left: -15px;
+}
+.card-text2{
+    text-align: justify;
+}
+.card3{
+    height: 400px;
+    width: 320px;
+    border: 2px solid wheat;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.op1{
+    margin-left: -20px;
+}
+.op2{
+    margin-left: 20px;
+}
+.op3{
+    display: inline;
+    margin-left: -15px;
+}
+.card-text3{
+    text-align: justify;
+}
+
+.card4{
+    height: 400px;
+    width: 320px;
+    border: 2px solid wheat;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.kl1{
+    margin-left: -20px;
+}
+.kl2{
+    margin-left: 20px;
+}
+.kl3{
+    display: inline;
+    margin-left: -15px;
+}
+.card-text4{
+    text-align: justify;
+}
+
+.card5{
+    height: 400px;
+    width: 320px;
+    border: 2px solid wheat;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.ab1{
+    margin-left: -20px;
+}
+.ab2{
+    margin-left: 20px;
+}
+.ab3{
+    display: inline;
+    margin-left: -15px;
+}
+.card-text5{
+    text-align: justify;
+}
+
+.card6{
+    height: 400px;
+    width: 320px;
+    border: 2px solid wheat;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.as1{
+    margin-left: -20px;
+}
+.as2{
+    margin-left: 20px;
+}
+.as3{
+    display: inline;
+    margin-left: -15px;
+}
+.card-text6{
+    text-align: justify;
 }
