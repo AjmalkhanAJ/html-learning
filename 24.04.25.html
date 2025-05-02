@@ -14,6 +14,20 @@
 
 <body>
 
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+    }
+  </script>
+  
    <!-- < Navbar> -->
  <nav class="navbar navbar-light bg-">
     <div class="container-fluid">
@@ -21,24 +35,27 @@
         <h2 class="h2 mb-0">BEST DELIVERY</h2>
       </a>
 
-      <button class="btn1 btn-secondary dropdown-toggle" data-bs-toggle="dropdown" >
-        Menu list
-      </button>
-      <ul class="dropdown-menu">
-        <li><button class="dropdown-item" type="button">Biriyani</button></li>
-        <li><button class="dropdown-item" type="button">Fried Rice</button></li>
-        <li><button class="dropdown-item" type="button">Parotta</button></li>
-        <li><button class="dropdown-item" type="button">Kushka</button></li>
-        <li><button class="dropdown-item" type="button">Meals</button></li>
-        <li><button class="dropdown-item" type="button">Curd Rice</button></li>
-      </ul>
-    
+      <div class="dropdown">
+        <button class="tn1 btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu list
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><button class="dropdown-item" type="button">Biriyani</button></li>
+          <li><button class="dropdown-item" type="button">Fried Rice</button></li>
+          <li><button class="dropdown-item" type="button">Parotta</button></li>
+          <li><button class="dropdown-item" type="button">Kushka</button></li>
+          <li><button class="dropdown-item" type="button">Meals</button></li>
+          <li><button class="dropdown-item" type="button">Curd Rice</button></li>
+        </ul>
+      </div>
     <a class="ak1" href="#">About us</a>
       <a class="ak2" href="#">Sign in</a>
-      <button class="btn3 ">Sign out</button>
+      <!-- <button class="btn3 ">Sign out</button> -->
 
-      
+      <a class="ak2" href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
     </div> 
+    
+
   </nav>
    <div>
     <img src="/hotel naveen-1.jpg" alt="Hotel Image" class="img-fluid" style="height: 900px; width: 100%;">
@@ -105,7 +122,9 @@
               <strong class="it1">Delivery:</strong> 20 mins &nbsp;&nbsp; <strong class="it2">Rating:</strong> ⭐4.5/5
             </p>
             <h6 class="it3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 50</h6>
-            <a href="#" class="btn2">Add to Cart</a>
+            <!-- <a href="#" class="btn2">Add to Cart</a> -->
+            <a href="javascript:void(0);" class="btn2" onclick="addToCart('BIRIYANI', 150)">Add to Cart</a>
+
           </div>
         </div>
       </div>
@@ -160,10 +179,10 @@
         <div class="col-md-4">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light">Home</a></li>
-            <li><a href="#" class="text-light">Menu</a></li>
-            <li><a href="#" class="text-light">Contact</a></li>
-            <li><a href="#" class="text-light">FAQ</a></li>
+            <li><a href="#" class="text-light">> Home</a></li>
+            <li><a href="#" class="text-light">> Menu</a></li>
+            <li><a href="#" class="text-light">> Contact</a></li>
+            <li><a href="#" class="text-light">> FAQ</a></li>
           </ul>
         </div>
         <div class="col-md-4">

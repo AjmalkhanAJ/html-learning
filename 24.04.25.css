@@ -8,6 +8,9 @@ h2{
     color: black;
     font-style:oblique;
 }
+h2:hover{
+    color: #e64c00;
+}
 .btn3{
     border-radius: 50px;
 
@@ -26,15 +29,23 @@ body{
     background-color:  white !important;
 }
 .ak1{
+    margin-left: 620px;
     text-decoration: none;
     color: black;
+}
+.ak1:hover{
+    color: #e64c00 ;
 }
 .ak2{
     text-decoration: none;
     color: black;
 }
-.btn1{
-    margin-left: 50%;
+.ak2:hover{
+    color: #e64c00 ;
+}
+.tn1{
+    display: inline;
+    margin-left: 650%;
     border-radius: 50px;
 }
 .it1{
@@ -82,3 +93,16 @@ body{
     background: #e64c00;
     color: white;
   }
+.dropdown-menu{
+    position: absolute;
+    margin-left: 1300px;
+}
+.container1{
+    background-color: #e64c00;
+}
+.text-light{
+    text-decoration: none;
+}
+h5{
+    color: #e64c00;
+}
