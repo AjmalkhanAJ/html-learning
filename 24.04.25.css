@@ -5,15 +5,14 @@ nav{
 h2{
     display: inline;
     margin-left: 20%;
-    color: black;
-    font-style:oblique;
+    color: #fc5603;
+    font-style: italic;
 }
 h2:hover{
-    color: #e64c00;
+    color: #e1692d;
 }
 .btn3{
     border-radius: 50px;
-
     color:black;
 }
 button:hover {
@@ -23,30 +22,36 @@ span{
     margin-left: 220%;
 }
 .navbar{
-    background-color: white;
+    background-color: black;
 }
 body{
     background-color:  white !important;
 }
 .ak1{
-    margin-left: 620px;
+    /* margin-left: 620px; */
     text-decoration: none;
-    color: black;
+    color:white;
+    font-size: large;
 }
 .ak1:hover{
     color: #e64c00 ;
 }
 .ak2{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: large;
 }
 .ak2:hover{
     color: #e64c00 ;
 }
 .tn1{
-    display: inline;
-    margin-left: 650%;
-    border-radius: 50px;
+     margin-left: 600px;
+     text-decoration: none;
+     color: white;
+     font-size: large;
+}
+.tn1:hover{
+    color: #e64c00 ;
 }
 .it1{
     margin-left: px;
@@ -66,14 +71,15 @@ body{
 .card1{
     height: 400px;
     width: 320px;
-    border: 2px solid wheat;
+    border: 1px solid wheat;
     background-color:white;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 2px 2px 2px white;
+    margin-top: 70px;
 }
 .card-tittle1{
-    margin-top: -80px;
+    margin-top: 150px;
 }
 
 .card-img-top{
@@ -105,4 +111,29 @@ body{
 }
 h5{
     color: #e64c00;
+}
+.jk{
+    text-decoration: none;
+}
+h1{
+    position: absolute;
+    margin-left: 42%;
+    margin-top: 40px !important;
+    color:  #e64c00;
+}
+h3{
+    color: #e64c00;
+    text-align: center;
+}
+.ab{
+    text-align: justify;
+    padding: 5px;
+    margin-left: 20px;
+}
+h4{
+    color: #e64c00;
+    text-align: center;
+}
+ab1{
+    margin-left: 30px;
 }

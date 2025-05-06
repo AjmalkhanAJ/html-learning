@@ -26,29 +26,21 @@
       localStorage.setItem("cart", JSON.stringify(cart));
       alert(name + " added to cart!");
     }
+    function toggleAboutUs() {
+    const para = document.getElementById("aboutUs");
+    para.style.display = para.style.display === "none" ? "block" : "none";
+  }
   </script>
   
    <!-- < Navbar> -->
  <nav class="navbar navbar-light bg-">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <h2 class="h2 mb-0">BEST DELIVERY</h2>
+        <h2 class="h2 mb-0">🍽️BEST DELIVERY</h2>
       </a>
 
-      <div class="dropdown">
-        <button class="tn1 btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-          Menu list
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <li><button class="dropdown-item" type="button">Biriyani</button></li>
-          <li><button class="dropdown-item" type="button">Fried Rice</button></li>
-          <li><button class="dropdown-item" type="button">Parotta</button></li>
-          <li><button class="dropdown-item" type="button">Kushka</button></li>
-          <li><button class="dropdown-item" type="button">Meals</button></li>
-          <li><button class="dropdown-item" type="button">Curd Rice</button></li>
-        </ul>
-      </div>
-    <a class="ak1" href="#">About us</a>
+        <a href="#menus" class="tn1">Menu list</a>
+    <a class="ak1" href="#abt" id="about">About us</a>
       <a class="ak2" href="#">Sign in</a>
       <!-- <button class="btn3 ">Sign out</button> -->
 
@@ -61,8 +53,9 @@
     <img src="/hotel naveen-1.jpg" alt="Hotel Image" class="img-fluid" style="height: 900px; width: 100%;">
   </div>
 
+  <h1 id="menus">Our menu's</h1>
   <!-- Cards Section -->
-  <div class="container my-5">
+  <div class="container my-5" >
     <div class="row g-4">
 
       <div class="col-md-4">
@@ -73,7 +66,8 @@
             <p class="card-text1"><strong>Description:</strong> Spicy Hyderabadi dum biriyani cooked with aromatic basmati rice.<br>
             <strong class="it1">Delivery:</strong> 30 mins <strong class="it2">Rating:</strong> ⭐4.5/5  </p> 
 
-           <h6 class="it3"> Rs : <i class="fa-solid fa-indian-rupee-sign"></i>150</h6> <a href="#" class="btn2">Add to Cart</a>
+           <h6 class="it3"> Rs : <i class="fa-solid fa-indian-rupee-sign"></i>150</h6> 
+           <a href="javascript:void(0);" class="btn2" onclick="addToCart('BIRIYANI', 150)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -85,10 +79,10 @@
           <div class="card-body text-center">
             <h5 class="card-title">FRIED RICE</h5>
             <p class="card-text1">
-              <strong >Description:</strong> Aromatic fried rice with mixed vegetables and special sauces.<br>
+              <strong >Description:</strong> Aromatic fried rice with mixed vegetables and special sauces with perfect taste.<br>
               <strong class="it1">Delivery:</strong> 20 mins &nbsp;&nbsp; <strong class="it2">Rating:</strong> ⭐4.4/5 </p>
             <h6 class="it3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 100</h6>
-            <a href="#" class="btn2">Add to Cart</a>
+            <a href="javascript:void(0);" class="btn2" onclick="addToCart('FRIED RICE', 100)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -101,11 +95,11 @@
           <div class="card-body text-center">
             <h5 class="card-title">PAROTTA</h5>
             <p class="card-text1">
-              <strong >Description:</strong> Soft and flaky layered South Indian parotta served hot.<br>
+              <strong >Description:</strong> Flaky and soft layered flatbread, Perfect with curry or as a meal on its own.<br>
               <strong class="it1">Delivery:</strong> 15 mins &nbsp;&nbsp; <strong class="it2">Rating:</strong> ⭐4.6/5
             </p>
             <h6 class="it3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 15</h6>
-            <a href="#" class="btn2">Add to Cart</a>
+            <a href="javascript:void(0);" class="btn2" onclick="addToCart('PAROTTA', 15)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -123,7 +117,7 @@
             </p>
             <h6 class="it3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 50</h6>
             <!-- <a href="#" class="btn2">Add to Cart</a> -->
-            <a href="javascript:void(0);" class="btn2" onclick="addToCart('BIRIYANI', 150)">Add to Cart</a>
+            <a href="javascript:void(0);" class="btn2" onclick="addToCart('KUSHKA',50)">Add to Cart</a>
 
           </div>
         </div>
@@ -141,7 +135,7 @@
               <strong class="it1">Delivery:</strong> 25 mins &nbsp;&nbsp; <strong class="it2">Rating:</strong> ⭐4.7/5
             </p>
             <h6 class="it3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 90</h6>
-            <a href="#" class="btn2">Add to Cart</a>
+            <a href="javascript:void(0);" class="btn2" onclick="addToCart('MEALS', 90)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -158,7 +152,7 @@
               <strong class="it1">Delivery:</strong> 15 mins &nbsp;&nbsp; <strong class="it2">Rating:</strong> ⭐4.8/5
             </p>
             <h6 class="it3">Rs: <i class="fa-solid fa-indian-rupee-sign"></i> 50</h6>
-            <a href="#" class="btn2">Add to Cart</a>
+            <a href="javascript:void(0);" class="btn2" onclick="addToCart('CURD RICE', 50)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -168,13 +162,56 @@
   </div>
 
 
+  <h3 id="abt">ABOUT US</h3>
+  <p class="ab"><i class="fa-regular fa-hand-point-right" style="color: #bd5d3d;"></i> 
+    Welcome to <strong>Best Delivery</strong> – your go-to food delivery service! 
+    We're passionate about connecting people with their favorite meals from the best restaurants in town.
+  </p>
+  <p class="ab"><i class="fa-regular fa-hand-point-right" style="color: #bd5d3d;"></i> 
+    Founded in 2025, Best Delivery was built to make food delivery fast, easy, and enjoyable. 
+    We partner with local restaurants to bring you a wide variety of dishes delivered hot and fresh.
+  </p>
+  <p class="ab"><i class="fa-regular fa-hand-point-right" style="color: #bd5d3d;"></i> 
+    Our mission is simple: <em>Deliver happiness in every bite.</em> 
+    With a user-friendly app, real-time tracking, and responsive support, we aim to provide a smooth experience.
+  </p>
+  <p class="ab"><i class="fa-regular fa-hand-point-right" style="color: #bd5d3d;"></i> 
+    Thank you for choosing Best Delivery. We're here to feed your cravings – one delivery at a time!
+  </p>
+
+  <h4>Who We Are</h4>
+            <p class="ab">
+              At <strong>Best Delivery</strong>, we’re more than just a food delivery app—we’re a team on a mission to bring joy to your table. 
+              Founded in 2025 by a group of food lovers and tech enthusiasts, Best Delivery was created to make ordering your favorite meals fast, reliable, and fun.
+            </p>
+
+            <h4>What We Do</h4>
+              <p class="ab">
+                We connect hungry customers with local restaurants and cloud kitchens through our easy-to-use mobile and web apps. 
+                Whether you're in the mood for a spicy biryani, a cheesy pizza, or a healthy salad, Best Delivery delivers it to your doorstep—hot and fresh.
+              </p>
+              <ul>
+                <li class="ab">Live order tracking</li>
+                <li class="ab">Multiple payment options</li>
+                <li class="ab">Exclusive offers and discounts</li>
+                <li class="ab">24/7 customer support</li>
+              </ul>
+
+              <h4>Why Choose Best Delivery?</h4>
+            <p class="ab"><i class="fa-regular fa-hand-point-right" style="color: #bd5d3d;"></i> 
+              Because we care—about your time, your food, and your satisfaction. Our platform is built for speed and simplicity, 
+              so you spend less time waiting and more time enjoying. We work closely with restaurant partners to ensure quality service every time.
+            </p>
+            <p class="ab"><i class="fa-regular fa-hand-point-right" style="color: #bd5d3d;"></i>  
+              Join thousands of happy customers who trust Best Delivery for every meal—from weekday lunch rushes to weekend family feasts.
+            </p>
 
   <footer class="bg-dark text-light py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h5>About Us</h5>
-          <p>We are a food delivery service dedicated to bringing the best food to your doorstep. Fresh, fast, and delicious!</p>
+         <a href="#" class="jk"> <h5>About Us</h5></a>
+          <p id="about">We are a food delivery service dedicated to bringing the best food to your doorstep. Fresh, fast, and delicious!</p>
         </div>
         <div class="col-md-4">
           <h5>Quick Links</h5>
