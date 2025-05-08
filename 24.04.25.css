@@ -28,7 +28,6 @@ body{
     background-color:  white !important;
 }
 .ak1{
-    /* margin-left: 620px; */
     text-decoration: none;
     color:white;
     font-size: large;
@@ -148,25 +147,10 @@ ab1{
     text-align: center;
     /* text-align: justify; */
 }
-.abs1{
-    height: 220px;
-    width: 40%;
-    border: 2px solid  white;
-    margin-left: 115px;
-    border-radius: 10px;
-    text-align: center;
-}
-.abs2{
-    height: 220px;
-    width: 40%;
-    border: 2px solid  white;
-    margin-left: 115px;
-    border-radius: 10px;
-    text-align: center;
-}
 .asd{
-    height: 350px;
+    height: 200px;
     width: 78%;
     border: 2px solid white;
     display: flex;
+    margin-left: 115px;
 }
