@@ -1,0 +1,23 @@
+
+.img-3{
+    height: 300px;
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 10px;  
+    background-image: url('./success-img.webp');
+    background-size: cover;
+    background-repeat: no-repeat;  
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 600px;
+}
+h2{
+    text-align: center;
+    color:  #e64c00;
+}
+.iframe{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
