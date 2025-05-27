@@ -58,17 +58,17 @@ const server = http.createServer((req,res)=>{
                  }
         
            }
-           else{
-            res.write(`<script>alert("olunga padida")</script>`);
-           }
+        //    else{
+        //     res.write(`<script>alert("olunga padida")</script>`);
+        //    }
               res.end();  
             })
-            else {
-                res.writeHead(404,{"content-Type":"text/html"});
-                res.write(`<h1> olunga padida </h1>`);
-                res.end();
+            // else {
+            //     res.writeHead(404,{"content-Type":"text/html"});
+            //     res.write(`<h1> olunga padida </h1>`);
+            //     res.end();
             
-            }
+            // }
 server.listen(5000,()=>{
    console.log("server running on http://localhost:5000");
    
