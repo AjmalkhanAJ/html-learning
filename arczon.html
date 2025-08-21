@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginform">
+        <input type="email" id="mail"/>
+        <input type="password" id="password"/>
+        <button type="submit">login</button>
+    </form>
+
+    <script>
+        document.getElementById("loginform").addEventListener("submit",function(e){
+            const email = document.getElementById("email");
+            const pass = document.getElementById("password");
+            if(email == "" || pass == ""){
+                alert("fields required");
+            }
+        });
+    </script>
+</body>
+</html>
