@@ -17,9 +17,10 @@ input{
         
     }
 button{
-    background-color: rgb(70, 226, 43);
+    background-color: rgb(213, 163, 216);
     border-radius: 10px;
     color: black;
+    width: 120px;
 }
 body{
     background-image: url(/car\ img.jpg);
