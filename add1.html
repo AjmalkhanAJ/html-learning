@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Maharaj</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: #d35400;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffdd99;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1606813902919-8d2e046e1e62") no-repeat center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 10px;
+    }
+
+    /* About */
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #d35400;
+    }
+
+    /* Products */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #d35400;
+    }
+
+    .card p {
+      padding: 0 15px 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: #d35400;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍰 Bakery Maharaj</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Freshly Baked Happiness Everyday!</h2>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>At Bakery Maharaj, we bring you freshly baked breads, cakes, and pastries made with love and the finest ingredients. Taste the tradition and happiness in every bite!</p>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601979031441-0095c0b7f7a9" alt="Cake">
+      <h3>Delicious Cakes</h3>
+      <p>Rich, creamy, and made to perfection.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541592106381-f3e06cc4bb17" alt="Bread">
+      <h3>Fresh Breads</h3>
+      <p>Soft, warm, and straight out of the oven.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600891963935-c4c0d09d5d1d" alt="Pastry">
+      <h3>Sweet Pastries</h3>
+      <p>Perfectly flaky and fill
