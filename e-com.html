@@ -6,26 +6,56 @@
     <title>Mini E-Commerce</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; 
             margin: 0;
             padding: 0;
             background: #f4f4f4;
         }
+        /* Navbar */
         header {
-            background: #333;
+            background: #222;
             color: white;
-            padding: 15px;
-            text-align: center;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        h1 {
-            margin: 0;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .search-bar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        .cart {
+            background: #ff9800;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Product Section */
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             padding: 20px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
         }
         .card {
@@ -33,11 +63,21 @@
             border-radius: 10px;
             padding: 15px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         .card img {
             width: 100%;
             border-radius: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.1rem;
         }
         button {
             background: #333;
@@ -47,56 +87,89 @@
             margin-top: 10px;
             cursor: pointer;
             border-radius: 5px;
+            transition: background 0.3s ease;
         }
         button:hover {
             background: #555;
         }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 10px;
-            background: #333;
+            background: #222;
             color: white;
             margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🛒 Mini E-Commerce</h1>
+        <div class="logo">🛒 Mini E-Commerce</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <div class="cart" onclick="alert('Go to Cart!')">Cart 🛍 (<span id="cart-count">0</span>)</div>
     </header>
 
     <section class="products">
         <div class="card">
             <img src="https://via.placeholder.com/200" alt="Product 1">
             <h3>Product 1</h3>
-            <p>$20</p>
-            <button>Add to Cart</button>
+            <p class="price">$20</p>
+            <button onclick="addToCart()">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="https://via.placeholder.com/200" alt="Product 2">
             <h3>Product 2</h3>
-            <p>$30</p>
-            <button>Add to Cart</button>
+            <p class="price">$30</p>
+            <button onclick="addToCart()">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="https://via.placeholder.com/200" alt="Product 3">
             <h3>Product 3</h3>
-            <p>$25</p>
-            <button>Add to Cart</button>
+            <p class="price">$25</p>
+            <button onclick="addToCart()">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="https://via.placeholder.com/200" alt="Product 4">
             <h3>Product 4</h3>
-            <p>$40</p>
-            <button>Add to Cart</button>
+            <p class="price">$40</p>
+            <button onclick="addToCart()">Add to Cart</button>
         </div>
     </section>
 
     <footer>
         <p>© 2025 Mini E-Commerce | All Rights Reserved</p>
     </footer>
+
+    <script>
+        let cartCount = 0;
+        function addToCart() {
+            cartCount++;
+            document.getElementById("cart-count").innerText = cartCount;
+            alert("Item added to cart!");
+        }
+    </script>
 </body>
 </html>
