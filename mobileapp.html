@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajmal App - Home</title>
+  <title>Ajmal - Home</title>
   <style>
     * {
       margin: 0;
@@ -13,8 +13,8 @@
     }
 
     body {
-      background-color: #f2f5f9;
-      color: #333;
+      background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -22,138 +22,174 @@
 
     /* Header */
     header {
-      background: #00bcd4;
-      color: #fff;
-      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     header h1 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 600;
+      color: #00e5ff;
     }
 
-    .menu-icon {
-      font-size: 1.5rem;
+    .menu {
+      font-size: 1.8rem;
       cursor: pointer;
+      transition: 0.3s;
     }
 
-    /* Greeting */
-    .welcome {
-      padding: 20px;
+    .menu:hover {
+      color: #00e5ff;
     }
 
-    .welcome h2 {
-      font-size: 1.4rem;
-      color: #222;
+    /* Hero */
+    .hero {
+      text-align: left;
+      padding: 30px 25px;
     }
 
-    .welcome p {
-      color: #666;
-      font-size: 0.9rem;
+    .hero h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    /* Feature Grid */
+    .hero p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      background: linear-gradient(90deg, #00e5ff, #00bcd4);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 229, 255, 0.4);
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(90deg, #00bcd4, #00acc1);
+    }
+
+    /* Feature Section */
     .features {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+      gap: 18px;
       padding: 0 20px;
       margin-top: 10px;
     }
 
     .card {
-      background: #fff;
-      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
       text-align: center;
       padding: 20px 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      backdrop-filter: blur(10px);
+      transition: 0.4s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
     }
 
     .card img {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
+      filter: drop-shadow(0 0 8px rgba(0,229,255,0.4));
     }
 
     .card h3 {
       margin-top: 10px;
-      color: #00bcd4;
       font-size: 1rem;
+      color: #00e5ff;
     }
 
-    /* CTA Section */
-    .cta {
-      background: #00bcd4;
-      color: #fff;
+    /* Promotion / CTA */
+    .promo {
       margin: 25px 20px;
-      border-radius: 15px;
       padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 18px;
+      background: linear-gradient(90deg, #00bcd4, #0097a7);
+      text-align: left;
+      box-shadow: 0 5px 20px rgba(0, 188, 212, 0.3);
     }
 
-    .cta h2 {
+    .promo h2 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .promo p {
+      font-size: 0.9rem;
+      color: #e0f7fa;
       margin-bottom: 10px;
-      font-size: 1.2rem;
     }
 
-    .cta button {
+    .promo button {
       background: #fff;
       color: #00bcd4;
       border: none;
       padding: 10px 20px;
       border-radius: 25px;
-      font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
       transition: 0.3s;
     }
 
-    .cta button:hover {
+    .promo button:hover {
       background: #e0f7fa;
     }
 
-    /* Bottom Nav */
+    /* Bottom Navigation */
     .bottom-nav {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.08);
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 10px 0;
-      border-top: 1px solid #ddd;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      position: sticky;
-      bottom: 0;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      backdrop-filter: blur(12px);
     }
 
     .bottom-nav div {
       text-align: center;
-      color: #666;
+      color: #ccc;
       font-size: 0.8rem;
+      transition: 0.3s;
     }
 
     .bottom-nav img {
       width: 25px;
       height: 25px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .active {
-      color: #00bcd4;
+      color: #00e5ff;
     }
 
     @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
       .features {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -164,37 +200,38 @@
 
   <header>
     <h1>Ajmal</h1>
-    <div class="menu-icon">&#9776;</div>
+    <div class="menu">&#9776;</div>
   </header>
 
-  <section class="welcome">
-    <h2>Hello, Ajmal 👋</h2>
-    <p>Welcome back! Explore your dashboard and manage everything in one place.</p>
+  <section class="hero">
+    <h2>Welcome Back, Ajmal 👋</h2>
+    <p>Discover new offers, manage your account, and explore the latest features tailored just for you.</p>
+    <button>Explore Now</button>
   </section>
 
   <section class="features">
     <div class="card">
-      <img src="https://img.icons8.com/fluency/48/home.png" alt="Home">
+      <img src="https://img.icons8.com/fluency/96/dashboard-layout.png" alt="Dashboard">
       <h3>Dashboard</h3>
     </div>
     <div class="card">
-      <img src="https://img.icons8.com/fluency/48/order-history.png" alt="Orders">
-      <h3>Orders</h3>
+      <img src="https://img.icons8.com/fluency/96/order-history.png" alt="Orders">
+      <h3>My Orders</h3>
     </div>
     <div class="card">
-      <img src="https://img.icons8.com/fluency/48/user.png" alt="Profile">
+      <img src="https://img.icons8.com/fluency/96/shopping-cart.png" alt="Shop">
+      <h3>Shop Now</h3>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/fluency/96/user.png" alt="Profile">
       <h3>Profile</h3>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
-      <h3>Settings</h3>
     </div>
   </section>
 
-  <section class="cta">
-    <h2>Exclusive Offers 🎉</h2>
-    <p>Don’t miss out on our special deals today!</p>
-    <button>Explore Now</button>
+  <section class="promo">
+    <h2>🔥 Special Deal Today!</h2>
+    <p>Enjoy 30% off on your next order. Limited time offer.</p>
+    <button>Claim Offer</button>
   </section>
 
   <nav class="bottom-nav">
@@ -207,12 +244,12 @@
       <p>Search</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/fluency/48/user.png" alt="Profile">
-      <p>Profile</p>
+      <img src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="Cart">
+      <p>Cart</p>
     </div>
     <div>
-      <img src="https://img.icons8.com/fluency/48/settings.png" alt="Settings">
-      <p>Settings</p>
+      <img src="https://img.icons8.com/fluency/48/user.png" alt="Profile">
+      <p>Profile</p>
     </div>
   </nav>
 
