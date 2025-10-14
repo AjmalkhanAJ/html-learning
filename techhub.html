@@ -1,35 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="techhub.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenvision</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      background-color: #bce6e6;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      width: 90%;
+      max-width: 1200px;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #009688;
+    }
+
+    select {
+      padding: 5px 10px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    .contact-btn {
+      border: 1px solid #000;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .contact-btn:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    main {
+      text-align: center;
+      margin-top: 80px;
+      padding: 0 20px;
+    }
+
+    main h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    main p {
+      margin-top: 40px;
+      font-size: 18px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .icons {
+      margin-top: 30px;
+      font-size: 24px;
+    }
+
+    .side-icons {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 36px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      main h1 {
+        font-size: 2rem;
+      }
+
+      main p {
+        font-size: 16px;
+      }
+
+      .side-icons {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="aj">
-    <div class="box">
-    <nav>
-       <h4 class="as1"><i class="fa-brands fa-unity" ></i></h4> <h4 class="as2">Greenvision</h4>  <h4 class="as3">about</h4> <h4 class="as4">Employees</h4> <label for="fruit"></label>
-<select id="fruit" name="fruit">
-  <option value="apple">products</option>
-  <option value="banana">mobiles</option>
-  <option value="orange">Laptops</option>
-  <option value="mango">Accessories</option>
-</select>
-  <button class="as6">contact us</button>
-    </nav>
-    </div>
-    <h1 class="zx1">managerial optimization</h1>
-    <h1 class="zx2">for you company</h1>
-<div class="cont">
-    <div class="con1"><div class="con1-1"><i id="vb" class="fa-solid fa-plus fa-xl"></i>  </div><div class="con1-2"> <i id="vb1" class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 45deg;"></i></div></div>
-    <div class="con2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum suscipit in quaerat alias, illo delectus expedita eligendi explicabo rem, quis praesentium provident culpa accusantium exercitationem libero eaque perspiciatis id modi.</div>
-    <div class="con2"><i class="fa-solid fa-envelope"></i> <i class="fa-solid fa-chart-line"></i> <i class="fa-solid fa-box"></i></div>
-</div>
+  <div class="container">
+    <header>
+      <div class="logo">🌿 Greenvision</div>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Employees</a>
+        <select>
+          <option>Products</option>
+          <option>Product 1</option>
+          <option>Product 2</option>
+        </select>
+      </nav>
+      <button class="contact-btn">Contact Us</button>
+    </header>
 
+    <main>
+      <h1>managerial optimization<br>for your company</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum suscipit in quaerat alias, illo delectus
+        expedita eligendi explicabo rem, quis praesentium provident culpa accusantium exercitationem libero eaque
+        perspiciatis id modi.
+      </p>
+      <div class="icons">📧 📈 💼</div>
+    </main>
+  </div>
 
-    </div>
+  <div class="side-icons">
+    <div>➕</div>
+    <div>↘️</div>
+  </div>
 </body>
 </html>
