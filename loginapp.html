@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Form - Multi Backend</title>
+  <title>Login Form - Local Storage</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -59,11 +59,6 @@
       background: #0056b3;
     }
 
-    .error {
-      color: red;
-      font-weight: bold;
-    }
-
     ul {
       list-style: none;
       padding: 0;
@@ -75,18 +70,26 @@
       padding: 8px;
       border-radius: 5px;
     }
+
+    .delete-btn {
+      float: right;
+      background: red;
+      color: white;
+      border: none;
+      padding: 3px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#" id="backend1" class="active">Backend 1</a>
-    <a href="#" id="backend2">Backend 2</a>
+    <a href="#" id="local" class="active">Local Storage</a>
   </nav>
 
   <div class="container">
     <h2>Login Form</h2>
-    <p id="error" class="error"></p>
 
     <form id="dataForm">
       <input type="text" id="name" name="name" placeholder="Name" required />
@@ -100,76 +103,54 @@
   </div>
 
   <script>
-    let backend = "http://localhost:5000";
-
-    document.getElementById("backend1").addEventListener("click", function (e) {
-      e.preventDefault();
-      backend = "http://localhost:5000";
-      setActive(this);
-      fetchData();
-    });
-
-    document.getElementById("backend2").addEventListener("click", function (e) {
-      e.preventDefault();
-      backend = "http://localhost:7000";
-      setActive(this);
-      fetchData();
-    });
-
-    function setActive(link) {
-      document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
-      link.classList.add("active");
+    // Load stored data
+    function loadData() {
+      const data = JSON.parse(localStorage.getItem("userData")) || [];
+      displayData(data);
     }
 
-    async function fetchData() {
-      try {
-        const res = await fetch(`${backend}/data`);
-        const data = await res.json();
-        displayData(data);
-        document.getElementById("error").textContent = "";
-      } catch (err) {
-        document.getElementById("error").textContent = "Cannot connect to backend. Make sure the server is running.";
-        document.getElementById("dataList").innerHTML = "";
-      }
-    }
-
+    // Display data in list
     function displayData(data) {
       const list = document.getElementById("dataList");
       list.innerHTML = "";
-      data.forEach(item => {
+
+      data.forEach((item, index) => {
         const dob = new Date(item.dob);
         const age = new Date(Date.now() - dob.getTime()).getUTCFullYear() - 1970;
         const li = document.createElement("li");
-        li.textContent = `${item.name} - ${item.email} - ${dob.toLocaleDateString()} - Age: ${age} years`;
+        li.innerHTML = `${item.name} - ${item.email} - ${dob.toLocaleDateString()} - Age: ${age} years 
+                        <button class="delete-btn" onclick="deleteItem(${index})">X</button>`;
         list.appendChild(li);
       });
     }
 
-    document.getElementById("dataForm").addEventListener("submit", async function (e) {
+    // Delete item
+    function deleteItem(index) {
+      let data = JSON.parse(localStorage.getItem("userData")) || [];
+      data.splice(index, 1);
+      localStorage.setItem("userData", JSON.stringify(data));
+      loadData();
+    }
+
+    // Handle form submission
+    document.getElementById("dataForm").addEventListener("submit", function (e) {
       e.preventDefault();
-      const formData = {
+      const newUser = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         dob: document.getElementById("dob").value
       };
 
-      try {
-        await fetch(`${backend}/submit`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData)
-        });
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("dob").value = "";
-        fetchData();
-        document.getElementById("error").textContent = "";
-      } catch (err) {
-        document.getElementById("error").textContent = "Cannot connect to backend. Make sure the server is running.";
-      }
+      let data = JSON.parse(localStorage.getItem("userData")) || [];
+      data.push(newUser);
+      localStorage.setItem("userData", JSON.stringify(data));
+
+      document.getElementById("dataForm").reset();
+      loadData();
     });
 
-    fetchData();
+    // Initial load
+    loadData();
   </script>
 </body>
 </html>
