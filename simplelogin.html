@@ -1,0 +1,232 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Login Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-card {
+      width: 320px;
+      padding: 25px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .login-error {
+      color: red;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <div class="login-card">
+      <h2 class="login-title">Login</h2>
+
+      <p id="errorMsg" class="login-error" style="display:none;"></p>
+
+      <input type="email" id="email" class="login-input" placeholder="Enter Email">
+
+      <input type="password" id="password" class="login-input" placeholder="Enter Password">
+
+      <button class="login-button" onclick="handleLogin()">Login</button>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin() {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let errorMsg = document.getElementById("errorMsg");
+
+      if (!email || !password) {
+        errorMsg.style.display = "block";
+        errorMsg.innerText = "Please fill all fields";
+        return;
+      }
+
+      // Simple dummy login
+      if (email === "admin@gmail.com" && password === "123456") {
+        alert("Login Successful!");
+      } else {
+        errorMsg.style.display = "block";
+        errorMsg.innerText = "Invalid email or password";
+      }
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #eef1f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 320px;
+      padding: 25px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .success {
+      color: green;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <h2 class="title">Login</h2>
+
+      <p id="message"></p>
+
+      <input type="text" id="email" class="input" placeholder="Enter Email">
+      <input type="password" id="password" class="input" placeholder="Enter Password">
+
+      <button class="button" onclick="login()">Login</button>
+
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      // Clear message
+      message.innerText = "";
+      message.className = "";
+
+      // Empty field check
+      if (!email || !password) {
+        message.className = "error";
+        message.innerText = "Please fill all fields";
+        return;
+      }
+
+      // Dummy login credentials
+      const validEmail = "admin@gmail.com";
+      const validPass = "123456";
+
+      if (email === validEmail && password === validPass) {
+        message.className = "success";
+        message.innerText = "Login Successful!";
+      } else {
+        message.className = "error";
+        message.innerText = "Invalid email or password";
+      }
+    }
+  </script>
+
+</body>
+</html>
