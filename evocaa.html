@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Scroll Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* Disable body scroll */
+    }
+
+    /* Sticky Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Page Number */
+    .page-number {
+      margin-top: 70px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    /* Scroll Container */
+    .scroll-container {
+      height: calc(100vh - 100px);
+      margin-top: 20px;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    /* Scroll Div Pages */
+    .page {
+      height: 100vh;
+      scroll-snap-align: start;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .page h1 {
+      margin-top: 80px;
+      font-size: 45px;
+    }
+
+    /* Background Colors for Demo */
+    .p1 { background: #ffeccc; }
+    .p2 { background: #fff7e6; }
+    .p3 { background: #fff1cc; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>Cafe Delight</h2>
+    <ul>
+      <li><a href="#p1">Home</a></li>
+      <li><a href="#p2">Menu</a></li>
+      <li><a href="#p3">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Number Display -->
+  <div class="page-number" id="pageNumber">1</div>
+
+  <!-- Scrollable DIV Container -->
+  <div class="scroll-container" id="scrollDiv">
+
+    <div class="page p1" id="p1">
+      <h1>Welcome to Cafe Delight</h1>
+      <p>Fresh Brews Everyday</p>
+    </div>
+
+    <div class="page p2" id="p2">
+      <h1>Our Menu</h1>
+      <p>Coffee • Pastries • Sandwiches</p>
+    </div>
+
+    <div class="page p3" id="p3">
+      <h1>About Us</h1>
+      <p>Serving since 2010 with love.</p>
+    </div>
+
+  </div>
+
+  <!-- Auto Page Number Script -->
+  <script>
+    const scrollDiv = document.getElementById("scrollDiv");
+    const pages = document.querySelectorAll(".page");
+    const pageNum = document.getElementById("pageNumber");
+
+    scrollDiv.addEventListener("scroll", () => {
+      let index = 0;
+
+      pages.forEach((page, i) => {
+        const top = page.getBoundingClientRect().top;
+
+        if (top >= 0 && top < window.innerHeight / 2) {
+          index = i;
+        }
+      });
+
+      pageNum.textContent = index + 1;
+    });
+  </script>
+
+</body>
+</html>
